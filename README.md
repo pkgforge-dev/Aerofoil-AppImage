@@ -1,9 +1,9 @@
 # Aerofoil-AppImage 🐧
 
-[![GitHub Downloads](https://img.shields.io/github/downloads/Aerofoil-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/Aerofoil-AppImage/releases/latest)
-[![CI Build Status](https://github.com//Aerofoil-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/Aerofoil-AppImage/releases/latest)
+[![GitHub Downloads](https://img.shields.io/github/downloads/Link4Electronics/Aerofoil-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/Link4Electronics/Aerofoil-AppImage/releases/latest)
+[![CI Build Status](https://github.com//Link4Electronics/Aerofoil-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/Link4Electronics/Aerofoil-AppImage/releases/latest)
 
-* [Latest Stable Release](https://github.com/Aerofoil-AppImage/releases/latest)
+* [Latest Stable Release](https://github.com/Link4Electronics/Aerofoil-AppImage/releases/latest)
 
 ---
 
