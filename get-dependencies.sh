@@ -16,3 +16,5 @@ get-debloated-pkgs --add-common --prefer-nano
 make-aur-package
 
 # If the application needs to be manually built that has to be done down here
+mv -v ./src/aerofoil-git/build/Packaged ./AppDir/lib/aerofoil/
+mv -v ./src/aerofoil-git/build/tools ./AppDir/lib/aerofoil/
