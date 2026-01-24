@@ -13,9 +13,10 @@ export DESKTOP=/usr/share/applications/io.github.elasota.aerofoil.desktop
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/AerofoilX
-cp -r /src/aerofoil-git/build/Packaged ./AppDir/bin
-echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
+quick-sharun /shared/bin/AerofoilX
+cp -r /src/lib/aerofoil/Packaged ./AppDir/shared/lib
+cp -r /src/lib/aerofoil/tools ./AppDir/shared/lib
+echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/shared' >> ./AppDir/.env
 
 # Additional changes can be done in between here
 
