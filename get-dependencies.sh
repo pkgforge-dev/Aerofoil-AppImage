@@ -8,7 +8,6 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     cmake      \
-    freetype2  \
     sdl2       \
     sdl2_image
 
