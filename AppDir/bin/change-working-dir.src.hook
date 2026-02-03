@@ -1,3 +1,0 @@
-dir=${XDG_CONFIG_HOME:-~/.config}/aerofoil
-mkdir -p "$dir"
-cd "$dir"
