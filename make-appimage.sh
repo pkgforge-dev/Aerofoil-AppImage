@@ -3,20 +3,21 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q aerofoil-git | awk '{print $2; exit}') # example command to get version of application here
-export ARCH VERSION
+export ARCH
 export OUTPATH=./dist
-export ADD_HOOKS="self-updater.bg.hook"
+export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=/usr/share/icons/hicolor/scalable/apps/io.github.elasota.aerofoil.svg
-export DESKTOP=/usr/share/applications/io.github.elasota.aerofoil.desktop
+export ICON=https://raw.githubusercontent.com/elasota/Aerofoil/eccf2cf528af04cd87d741719db34d7745c05be5/Resources/Linux/io.github.elasota.aerofoil.svg
+export DESKTOP=https://raw.githubusercontent.com/elasota/Aerofoil/refs/heads/master/Resources/Linux/io.github.elasota.aerofoil.desktop
 export STARTUPWMCLASS=AerofoilX
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
 quick-sharun /usr/bin/AerofoilX /usr/lib/aerofoil
 
-# Additional changes can be done in between here
-
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
+
+# Test the app for 12 seconds, if the app normally quits before that time
+# then skip this or check if some flag can be passed that makes it stay open
+quick-sharun --simple-test ./dist/*.AppImage
