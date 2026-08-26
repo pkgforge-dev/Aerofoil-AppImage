@@ -25,6 +25,9 @@ VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
 git clone "$REPO" ./Aerofoil
 echo "$VERSION" > ~/version
 
+mkdir -p ./AppDir/bin/tools
 cd ./Aerofoil
 cmake -DCMAKE_BUILD_TYPE=Release -B build
 cmake --build build
+mv -v build/AerofoilX build/Packaged ../AppDir/bin
+mv -v build/bin2gp build/flattenmov build/FTagData build/gpr2gpa build/hqx2bin build/hqx2gp build/MakeTimestamp build/MergeGPF build/unpacktool ../AppDir/bin/tools
