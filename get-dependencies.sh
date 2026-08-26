@@ -21,5 +21,5 @@ echo "$VERSION" > ~/version
 
 cd ./Aerofoil
 cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="/usr" -B build
-cmake --build build
+cmake --build build -j$(nproc)
 cmake --install build
