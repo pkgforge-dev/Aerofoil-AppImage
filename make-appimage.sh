@@ -13,8 +13,8 @@ export STARTUPWMCLASS=AerofoilX
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-#quick-sharun /usr/bin/AerofoilX /usr/lib/aerofoil
-quick-sharun ./AppDir/bin/*
+quick-sharun /usr/bin/AerofoilX /usr/lib/aerofoil
+#quick-sharun ./AppDir/bin/*
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
