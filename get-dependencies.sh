@@ -16,7 +16,7 @@ echo "Building Aerofoil..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/elasota/Aerofoil"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./Aerofoil
+git clone --depth 1 "$REPO" ./Aerofoil
 echo "$VERSION" > ~/version
 
 cd ./Aerofoil
