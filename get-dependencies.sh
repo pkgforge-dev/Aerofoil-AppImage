@@ -19,7 +19,6 @@ VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
 git clone --depth 1 "$REPO" ./Aerofoil
 echo "$VERSION" > ~/version
 
-cd ./Aerofoil
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="/usr" -B build
+cmake -S ./Aerofoil -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX="/usr" -B build
 cmake --build build -j$(nproc)
 cmake --install build
